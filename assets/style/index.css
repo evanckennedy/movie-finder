@@ -33,7 +33,7 @@ body {
 }
 
 .container {
-  width: min(100% - 30px, 1080px);
+  width: min(100% - 30px, 940px);
   margin-inline: auto;
 }
 
@@ -41,6 +41,10 @@ main {
   height: 100svh;
   justify-content: center;
   align-items: center;
+}
+
+h1, h2, p {
+  color: #fff;
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Component                                            */
@@ -101,4 +105,47 @@ div ul li {
 
 .find-button:active {
   background-color: #0070df;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Component                                            */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.poster-wrapper {
+  /* grow, shrink, basis */
+  flex: 0 0 auto;
+
+  img {
+    height: 265px;
+  }
+}
+
+.information-container {
+  flex: 1;
+
+  h2 {
+    font-weight: 500;
+    font-size: 2.7rem;
+  }
+
+  .release-duration, .genres {
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 500;
+  }
+
+  .description {
+    margin-top: 20px;
+  }
+
+  .genres {
+    gap: 0.8rem;
+    margin-top: 30px;
+  }
+
+  .genres span {
+    padding: 3px 15px;
+    background-color: rgb(255 255 255 / 0.05);
+    border: 0.5px solid rgb(255 255 255 / 0.15);
+    border-radius: 50px;
+  }
 }
