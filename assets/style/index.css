@@ -1,0 +1,104 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Utility Classes                                      */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.flex {
+  display: flex;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Base                                                 */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+:root {
+  --app-background-dark: rgb(24, 23, 32);
+  --border-radius: 5px;
+}
+
+body {
+  background-color: var(--app-background-dark);
+  font-family: 'Noto Sans', 'Open Sans', arial, sans-serif;
+}
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+main {
+  height: 100svh;
+  justify-content: center;
+  align-items: center;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Component                                            */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+form {
+  width: 520px;
+}
+
+.search-bar, .movie-search-input {
+  width: 100%;
+}
+
+.movie-search-input, .matched-movies-wrapper, .find-button {
+  border-radius: var(--border-radius);
+}
+
+.movie-search-input {
+  background-color: rgb(255 255 255 / 0.05);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  padding: 0 1rem;
+  color: #fff;
+}
+
+.matched-movies-wrapper {
+  background-color: #ffaaaa;
+  color: var(--app-background-dark);
+}
+
+div ul li {
+  padding: 0 1rem;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.matched-movies-wrapper {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 0;
+}
+
+.find-button {
+  background-color: #007bff;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.15s ease-in-out;
+  width: 125px;
+  height: 45px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.find-button:hover {
+  background-color: #0072ed;
+}
+
+.find-button:active {
+  background-color: #0070df;
+}
