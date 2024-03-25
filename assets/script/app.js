@@ -52,16 +52,17 @@ function listMovies(input) {
 /* when an option is clicked, the text content is copied to the input field */
 function copyToInputOnClick(element) {
   utils.listen('click', element, () => {
-    searchInput.value = element.textContent
+    searchInput.value = element.textContent;
+    matchedMoviesDisplay.innerHTML = ''; // Clear the list
   });
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Search Suggestions                                   */
+/*  Get Movie                                            */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Event listeners                                       */
+/*  Event listeners                                      */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 utils.listen('input', searchInput, () => listMovies(searchInput.value));
