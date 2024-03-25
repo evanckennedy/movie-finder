@@ -40,6 +40,7 @@ function listMovies(input) {
     occurences.forEach(occurence => {
       const newLi = document.createElement('li');
       newLi.textContent = occurence;
+      copyToInputOnClick(newLi);
       matchedMoviesDisplay.appendChild(newLi);
     })
     
@@ -48,4 +49,19 @@ function listMovies(input) {
   }
 }
 
- utils.listen('input', searchInput, () => listMovies(searchInput.value));
+/* when an option is clicked, the text content is copied to the input field */
+function copyToInputOnClick(element) {
+  utils.listen('click', element, () => {
+    searchInput.value = element.textContent
+  });
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Search Suggestions                                   */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Event listeners                                       */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+utils.listen('input', searchInput, () => listMovies(searchInput.value));
