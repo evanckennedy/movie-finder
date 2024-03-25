@@ -25,7 +25,6 @@ function searchMovies(searchTerm) {
   const matchingTitles = matchingMovies.map(movie => movie.title);
   return matchingTitles.length > 5 ? matchingTitles.splice(0, 5) : matchingTitles;
 }
-/* utils.listen('input', searchInput, () => utils.print(searchMovies(searchInput.value))); */
 
 function listMovies(input) {
   if (input.length < 3) {
@@ -49,7 +48,7 @@ function listMovies(input) {
   }
 }
 
-/* when an option is clicked, the text content is copied to the input field */
+/* When an option is clicked, the text content is copied to the input field */
 function copyToInputOnClick(element) {
   utils.listen('click', element, () => {
     searchInput.value = element.textContent;
@@ -90,9 +89,9 @@ function getMovie() {
 
   movieContainer.innerHTML = movieDetailsHTML;
 }
-utils.listen('click', findButton, getMovie);
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Event listeners                                      */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 utils.listen('input', searchInput, () => listMovies(searchInput.value));
+utils.listen('click', findButton, getMovie);
