@@ -35,6 +35,9 @@ body {
 .container {
   width: min(100% - 30px, 940px);
   margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 main {
@@ -46,11 +49,19 @@ main {
 h1, h2, p {
   color: #fff;
 }
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Component                                            */
+/*  Search section                                       */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 form {
-  width: 520px;
+  width: 540px;
 }
 
 .search-bar, .movie-search-input {
@@ -66,6 +77,7 @@ form {
   border: 1px solid rgb(255 255 255 / 0.1);
   padding: 0 1rem;
   color: #fff;
+  height: 45px;
 }
 
 .matched-movies-wrapper {
@@ -108,8 +120,12 @@ div ul li {
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Component                                            */
+/*  Movie Information                                    */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.movie-information-container {
+  margin-top: 50px;
+  height: 275px;
+}
 
 .poster-wrapper {
   /* grow, shrink, basis */
