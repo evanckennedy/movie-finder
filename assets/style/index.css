@@ -81,12 +81,18 @@ form {
 }
 
 .matched-movies-wrapper {
-  background-color: #ffaaaa;
+  background-color: #fff;
+  cursor: pointer;
   color: var(--app-background-dark);
 }
 
 div ul li {
   padding: 0 1rem;
+  transition: background-color 0.15s ease-in-out;
+}
+
+div ul li:hover {
+  background-color: rgb(0 0 0 / 0.05);
 }
 
 .search-bar {
