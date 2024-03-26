@@ -60,6 +60,11 @@ h1, h2, p {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Search section                                       */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1.2rem;
+}
+
 form {
   width: 540px;
 }
