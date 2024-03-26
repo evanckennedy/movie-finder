@@ -11,8 +11,9 @@ import movies from './movies.js';
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 const searchInput = utils.select('.movie-search-input');
 const matchedMoviesDisplay = utils.select('.matched-movies-wrapper ul');
-const findButton = utils.select('.find-button')
-const movieContainer = utils.select('.movie-information-container')
+const findButton = utils.select('.find-button');
+const movieContainer = utils.select('.movie-information-container');
+const form = utils.select('form'); 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Search Suggestions                                   */
@@ -96,3 +97,7 @@ function getMovie() {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 utils.listen('input', searchInput, () => listMovies(searchInput.value));
 utils.listen('click', findButton, getMovie);
+// prevents form from submitting
+utils.listen('submit', form, (event) => {
+  event.preventDefault();
+});
