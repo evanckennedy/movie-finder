@@ -25,6 +25,7 @@
 :root {
   --app-background-dark: rgb(24, 23, 32);
   --border-radius: 5px;
+  --blue: #007bff;
 }
 
 body {
@@ -61,8 +62,15 @@ h1, h2, p {
 /*  Search section                                       */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 h1 {
-  font-size: 4rem;
-  margin-bottom: 1.2rem;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.title-description {
+  color: var(--blue);
+  font-weight: 400;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
 }
 
 form {
@@ -112,7 +120,7 @@ div ul li:hover {
 }
 
 .find-button {
-  background-color: #007bff;
+  background-color: var(--blue);
   color: #fff;
   text-transform: uppercase;
   transition: background-color 0.15s ease-in-out;
