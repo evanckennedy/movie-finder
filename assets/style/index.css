@@ -152,6 +152,7 @@ div ul li:hover {
 
   img {
     height: 265px;
+    border-radius: var(--border-radius);
   }
 }
 
