@@ -45,7 +45,7 @@ function listMovies(input) {
     })
     
   } else {
-    matchedMoviesDisplay.innerHTML = '<li>Movie not found</li>'
+    matchedMoviesDisplay.innerHTML = '<li style="cursor: default; user-select: none;">Movie not found</li>';
   }
 }
 
