@@ -90,6 +90,7 @@ function getMovie() {
 
   movieContainer.innerHTML = movieDetailsHTML;
   movieContainer.classList.remove('hidden');
+  searchInput.value = '';
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
