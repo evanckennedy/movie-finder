@@ -42,7 +42,7 @@ body {
 }
 
 main {
-  height: 100svh;
+  min-height: 100svh;
   justify-content: center;
   align-items: center;
 }
@@ -93,30 +93,27 @@ form {
   height: 45px;
 }
 
-.matched-movies-wrapper {
-  background-color: #fff;
-  cursor: pointer;
-  color: var(--app-background-dark);
-}
-
-div ul li {
-  padding: 0 1rem;
-  transition: background-color 0.15s ease-in-out;
-}
-
-div ul li:hover {
-  background-color: rgb(0 0 0 / 0.05);
-}
-
 .search-bar {
   position: relative;
 }
 
 .matched-movies-wrapper {
+  background-color: #fff;
+  cursor: pointer;
+  color: var(--app-background-dark);
   position: absolute;
   top: 50px;
   right: 0;
   left: 0;
+}
+
+div ul li {
+  padding: 0.2rem 1rem;
+  transition: background-color 0.15s ease-in-out;
+}
+
+div ul li:hover {
+  background-color: rgb(0 0 0 / 0.05);
 }
 
 .find-button {
