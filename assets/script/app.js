@@ -52,7 +52,7 @@ function listMovies(input) {
     
       // If the clicked element is not the 'not-found' element and the 'not-found' element exists, remove it
       if (event.target !== notFoundElement && notFoundElement) {
-        notFoundElement.remove()
+        notFoundElement.remove();
       }
     });
   }
