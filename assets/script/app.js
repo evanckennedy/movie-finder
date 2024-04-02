@@ -45,7 +45,16 @@ function listMovies(input) {
     })
     
   } else {
-    matchedMoviesDisplay.innerHTML = '<li style="cursor: default; user-select: none;">Movie not found</li>';
+    matchedMoviesDisplay.innerHTML = '<li class="not-found" style="cursor: default; user-select: none;">Movie not found</li>';
+
+    utils.listen('click', document, (event) => {
+      const notFoundElement = utils.select('.not-found');
+    
+      // If the clicked element is not the 'not-found' element and the 'not-found' element exists, remove it
+      if (event.target !== notFoundElement && notFoundElement) {
+        notFoundElement.remove()
+      }
+    });
   }
 }
 
